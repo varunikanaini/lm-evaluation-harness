@@ -19,18 +19,7 @@ This document explains the transition from a traditional **Few-Shot Prompting** 
 
 ---
 
-## 🧠 Why the Changes Were Made
-
-### ✅ Benefits of Zero-Shot CoT Prompting:
-
-* **Instruction-based prompting** improves generalization.
-* Removes the need for manually curated few-shot examples.
-* Guarantees consistent formatting for final answer extraction.
-* Enables more interpretable, step-by-step reasoning useful for debugging and analysis.
-
----
-
-## ⚙️ Installation Prerequisite (Mandatory for ROCm 6.4)
+## ⚙️ Installation Prerequisite (For AMD GPUS)
 
 Before evaluation, install the nightly ROCm-compatible PyTorch stack:
 
@@ -67,7 +56,7 @@ accelerate launch --multi_gpu --num_processes=${NUM_GPUS} -m lm_eval \
   --log_samples
 ```
 
-📝 **Logs and sample generations** are saved under `result_logs/` as configured in your shell script.
+📝 **Logs and sample generations** are saved under `result_logs/`
 
 ---
 
@@ -103,9 +92,8 @@ Everything else (e.g., `doc_to_target`, `regexes_to_ignore`, filters) remains th
 
 ## 📌 Final Notes
 
-* This configuration more closely reflects **instruction-tuned prompting**, which has shown **better accuracy** and **interpretability** on reasoning-heavy benchmarks like GSM8K.
-* It maintains **compatibility** with `lm_eval_harness`’s scoring logic used in dheyo's original setup.
-* The changes were tested with the model: `DeepSeek-R1-Distill-Qwen-1.5B-gsm8k_v8_qat.gguf`.
+* This configuration more closely reflects **Dheyo's Benchmarking Scripts**.
+* The changes ware being tested with the model: `DeepSeek-R1-Distill-Qwen-1.5B-gsm8k_v8_qat.gguf`.
 
 ---
 
