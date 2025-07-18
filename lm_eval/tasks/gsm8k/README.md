@@ -2,7 +2,7 @@
 
 This document explains the transition from a traditional **Few-Shot Prompting** approach to a more robust **Zero-Shot Chain-of-Thought (CoT)** evaluation for the GSM8K task. It also provides clear instructions on how to reproduce results using both **single-GPU** and **multi-GPU** environments.
 
-> ⚠️ **Purpose**: To match previous dheyo's benchmarking scripts.
+> ⚠️ **Purpose**: To match previous dheyo's benchmarking scripts. [Original README.md](https://github.com/varunikanaini/lm-evaluation-harness/blob/main/lm_eval/tasks/gsm8k/README.md)
 
 ---
 
