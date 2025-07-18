@@ -21,15 +21,24 @@ This document explains the transition from a traditional **Few-Shot Prompting** 
 
 ## ⚙️ Installation Prerequisite (For AMD GPUS)
 
-Before evaluation, install the nightly ROCm-compatible PyTorch stack:
+> Before evaluation, install the nightly ROCm-compatible PyTorch stack and upgrade ggufs:
 
 ```bash
 pip install --pre --upgrade torch torchvision torchao --index-url https://download.pytorch.org/whl/nightly/rocm6.4
+
+pip install --upgrade gguf
 ```
 
 ---
 
 ## 🧪 Evaluation Commands
+
+> Run the bash script
+
+```bash
+chmod +x run_eval.sh
+./run_eval.sh
+```
 
 ### ▶️ **Single-GPU Evaluation**
 
